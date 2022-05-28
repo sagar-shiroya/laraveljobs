@@ -14,19 +14,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', static function () {
+    return view('listings',[
+        'title' => 'Latest Job Listings',
+        'listings' => [
+            [
+                'id' => 1,
+                'title' => 'Listing one',
+                'description' => 'This is listing one for Laravel jobs'
+            ],
+            [
+                'id' => 2,
+                'title' => 'Listing two',
+                'description' => 'This is listing two for Laravel jobs'
+            ],
+            [
+                'id' => 3,
+                'title' => 'Listing three',
+                'description' => 'This is listing three for Laravel jobs'
+            ],
+        ]
+    ]);
 });
-
-// Keeping it for reference
-//Route::get('/hello', function(){
-//    return response("<h1>Hello Laravel</h1>", 500)->header('Content-type', 'text/plain'); // .../hello
-//});
-//
-//Route::get('/posts/{id}', function($id){
-//    return response('Post:' . $id); // .../posts/10
-//})->where('id','[0-9]+');
-//
-//Route::get('/search', function(Request $request){
-//    return response('Name:' . $request->name, 200); // .../search?name=sagar
-//});
