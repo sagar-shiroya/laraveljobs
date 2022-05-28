@@ -1,6 +1,6 @@
 <h1>{{$title}}</h1>
 
-@unless(count($listings) === 0))
+@unless(count($listings) === 0)
     @foreach($listings as $listing)
         <h2>{{$listing['title']}}</h2>
         <p>{{$listing['description']}}</p>
