@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Keeping it for reference
+//Route::get('/hello', function(){
+//    return response("<h1>Hello Laravel</h1>", 500)->header('Content-type', 'text/plain'); // .../hello
+//});
+//
+//Route::get('/posts/{id}', function($id){
+//    return response('Post:' . $id); // .../posts/10
+//})->where('id','[0-9]+');
+//
+//Route::get('/search', function(Request $request){
+//    return response('Name:' . $request->name, 200); // .../search?name=sagar
+//});
