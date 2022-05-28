@@ -21,3 +21,9 @@ Route::get('/', static function () {
         'listings' => Listing::all()
     ]);
 });
+
+Route::get('/listing/{id}', static function ($id) {
+    return view('listing',[
+        'listing' => Listing::find($id)
+    ]);
+});
